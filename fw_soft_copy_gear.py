@@ -1,5 +1,41 @@
 ## run a gear via SDK
-##
+"""
+Flywheel Soft Copy Gear Runner
+
+This script automates the process of copying imaging data within Flywheel using the soft-copy gear.
+It reads a list of subjects from a CSV file and queues copy jobs for each project, transferring
+selected subject data to a destination project while maintaining a consistent naming structure.
+
+Module Dependencies:
+    - flywheel: Flywheel SDK for API interactions
+    - pandas: Data manipulation and CSV reading
+    - os: Environment variable access
+
+Environment Variables:
+    - FW_API_KEY: Flywheel API authentication key
+
+Main Workflow:
+    1. Authenticates to Flywheel using API key
+    2. Loads subject metadata from a local CSV file
+    3. Iterates through unique projects in the dataset
+    4. For each project:
+        - Retrieves the Flywheel project container
+        - Filters subjects belonging to that project
+        - Configures gear parameters (copy strategy, subject filter, destination)
+        - Creates destination project if it doesn't exist
+        - Submits a soft-copy gear job to process the data
+    5. Logs job IDs for tracking and monitoring
+
+Configuration Parameters:
+    - duplicate-strategy: Handling of existing files (skip, overwrite, etc.)
+    - subjects-to-include: Comma-separated list of subject IDs to copy
+    - intermediate-group: Target Flywheel group for copied data
+    - target-project: Destination project path (group/project format)
+
+Returns:
+    Console output with job IDs for each queued copy operation
+"""
+## 
 
 import flywheel
 import pandas as pd
