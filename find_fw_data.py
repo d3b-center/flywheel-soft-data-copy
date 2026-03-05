@@ -1,8 +1,8 @@
 """Find Flywheel imaging data for a list of CBTN subjects.
 
 Examples:
-	python 1_find_fw_data.py --subjects-csv madsen/sub_list.csv --output-csv madsen/cbtn_selected_fw.csv
-	python 1_find_fw_data.py --input-mode cbtn-all --diagnosis-filter "High-Grade Glioma" --output-csv madsen/cbtn_selected_fw.csv
+	python find_fw_data.py --subjects-csv madsen/sub_list.csv --output-csv madsen/cbtn_selected_fw.csv
+	python find_fw_data.py --input-mode cbtn-all --diagnosis-filter "High-Grade Glioma" --output-csv madsen/cbtn_selected_fw.csv
 """
 
 import argparse

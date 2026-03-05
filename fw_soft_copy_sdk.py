@@ -9,8 +9,11 @@
 #   - if 'Session' column is not present, the script will copy at the subject level
 #
 #   Note: the script uses the Flywheel SDK's subject_copy and session_copy functions,
-#   which perform a "soft copy" (i.e. the files are not duplicated, but the same files are
+#   which performs a "soft copy" (i.e. the files are not duplicated, but the same files are
 #   referenced in the new location). This is more efficient than downloading and re-uploading files
+#
+#   Example usage:
+#       python fw_soft_copy_sdk.py --input-csv input.csv --destination-project group/destination_project
 
 import argparse
 import os
