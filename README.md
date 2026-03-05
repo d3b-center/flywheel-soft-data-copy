@@ -104,3 +104,4 @@ Main arguments:
 - `--dry-run` print planned copies without launching them
 - `--yes` skip interactive confirmation prompt
 - `--strict` stop on first copy error
+- `--api-key` (default: `FW_API_KEY` environment variable) Flywheel API key
