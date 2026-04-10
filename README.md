@@ -115,3 +115,5 @@ python pull_az_file_manifest.py
 ```
 
 As written, this script will create a file manifest based on the contents of the az_imaging_delivery project.  It is an example script that can be adapted to create manifests of other projects as needed, to support file delivery or other cases where it is useful to be able to list the contents of the project.
+
+An example of the output of this python script is in this repoistory: AZ_manifest_2026-04-10.csv
