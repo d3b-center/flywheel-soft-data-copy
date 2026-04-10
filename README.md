@@ -105,3 +105,13 @@ Main arguments:
 - `--yes` skip interactive confirmation prompt
 - `--strict` stop on first copy error
 - `--api-key` (default: `FW_API_KEY` environment variable) Flywheel API key
+
+## Additional scripts
+
+### Output Contents of Project To CSV
+
+```bash
+python pull_az_file_manifest.py
+```
+
+As written, this script will create a file manifest based on the contents of the az_imaging_delivery project.  It is an example script that can be adapted to create manifests of other projects as needed, to support file delivery or other cases where it is useful to be able to list the contents of the project.
